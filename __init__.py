@@ -20,6 +20,7 @@ from .uv_map_rotate_addin import ShaderNodeuv_map_rotate
 from .uv_map_swirl_addin import ShaderNodeuv_map_swirl
 from .uv_map_tile_pattern_1_addin import ShaderNodeuv_map_tile_pattern_1
 from .uv_map_tile_pattern_2_addin import ShaderNodeuv_map_tile_pattern_2
+from .uv_map_diamond_addin import ShaderNodeuv_map_diamond
 
 import bpy,nodeitems_utils
 from nodeitems_utils import NodeCategory, NodeItem
@@ -34,6 +35,7 @@ node_categories = [
     ExtraNodesCategory("SH_BRICK_TRIKS", "BrickTricks", items=[
         NodeItem("ShaderNodeuv_map_tile_pattern_1"),
         NodeItem("ShaderNodeuv_map_tile_pattern_2"),
+        NodeItem("ShaderNodeuv_map_diamond"),
         NodeItem("ShaderNodeuv_map_brick_wall"),
         NodeItem("ShaderNodeuv_map_swirl"),
         NodeItem("ShaderNodebrick_rounded_corner"),
@@ -52,6 +54,7 @@ def register():
     bpy.utils.register_class(ShaderNodeuv_map_swirl)
     bpy.utils.register_class(ShaderNodeuv_map_tile_pattern_1)
     bpy.utils.register_class(ShaderNodeuv_map_tile_pattern_2)
+    bpy.utils.register_class(ShaderNodeuv_map_diamond)
     nodeitems_utils.register_node_categories("BRICK_TRICKS_NODES", node_categories)
  
  
@@ -65,7 +68,7 @@ def unregister():
     bpy.utils.unregister_class(ShaderNodeuv_map_swirl)
     bpy.utils.unregister_class(ShaderNodeuv_map_tile_pattern_1)
     bpy.utils.unregister_class(ShaderNodeuv_map_tile_pattern_2)
- 
+    bpy.utils.unregister_class(ShaderNodeuv_map_diamond)
 if __name__ == "__main__":
     register()
    

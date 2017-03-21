@@ -24,6 +24,9 @@ Note for mac users:
 
 Whats new
 --------------------------
+#### V0.1.2
+* New Diamond Pattern
+ 
 #### V0.1.1 
 * Turned into a proper addon with the help of Secrop
 * Fixed CellID being off for swirl pattern
