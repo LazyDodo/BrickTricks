@@ -4,7 +4,7 @@ bl_info = {
         "LazyDodo, "
         "Secrop"
      ),
-    "version": (0, 0, 1,1),
+    "version": (0, 0, 1,3),
     "blender": (2, 7, 8),
     "location": "Nodes > Add nodes",
     "description": "Brick Tricks Cycles Nodes",
