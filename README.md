@@ -24,6 +24,13 @@ Note for mac users:
 
 Whats new
 --------------------------
+#### V0.1.3
+* Diamond Pattern- Added border option
+* Diamond Pattern- Mask is now TileMask
+* Diamond Pattern- Added BorderMask
+* fixed uv precision issues with brickwall and diamond shaders
+
+
 #### V0.1.2
 * New Diamond Pattern
  
