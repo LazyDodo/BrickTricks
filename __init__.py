@@ -4,8 +4,8 @@ bl_info = {
         "LazyDodo, "
         "Secrop"
      ),
-    "version": (0, 0, 1,3),
-    "blender": (2, 7, 8),
+    "version": (0, 0, 1,4),
+    "blender": (2, 80, 0),
     "location": "Nodes > Add nodes",
     "description": "Brick Tricks Cycles Nodes",
     "warning": "",
@@ -29,7 +29,7 @@ class ExtraNodesCategory(NodeCategory):
     @classmethod
     def poll(cls, context):
         return (context.space_data.tree_type == 'ShaderNodeTree' and
-                context.scene.render.use_shading_nodes)
+                context.scene.render.engine in ['BLENDER_EEVEE', 'CYCLES'])
  
 node_categories = [
     ExtraNodesCategory("SH_BRICK_TRIKS", "BrickTricks", items=[
