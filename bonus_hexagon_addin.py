@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodebonus_hexagon(bpy.types.NodeCustomGroup):
+class ShaderNodebonus_hexagon(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodebonus_hexagon'
     bl_label='bonus_hexagon'
     bl_icon='NONE'
