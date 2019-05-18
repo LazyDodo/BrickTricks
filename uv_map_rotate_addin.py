@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodeuv_map_rotate(bpy.types.NodeCustomGroup):
+class ShaderNodeuv_map_rotate(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodeuv_map_rotate'
     bl_label='uv_map_rotate'
     bl_icon='NONE'
