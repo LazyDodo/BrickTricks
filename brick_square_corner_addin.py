@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodebrick_square_corner(bpy.types.NodeCustomGroup):
+class ShaderNodebrick_square_corner(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodebrick_square_corner'
     bl_label='brick_square_corner'
     bl_icon='NONE'
