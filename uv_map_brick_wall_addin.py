@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodeuv_map_brick_wall(bpy.types.NodeCustomGroup):
+class ShaderNodeuv_map_brick_wall(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodeuv_map_brick_wall'
     bl_label='uv_map_brick_wall'
     bl_icon='NONE'
