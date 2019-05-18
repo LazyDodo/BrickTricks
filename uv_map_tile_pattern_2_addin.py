@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodeuv_map_tile_pattern_2(bpy.types.NodeCustomGroup):
+class ShaderNodeuv_map_tile_pattern_2(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodeuv_map_tile_pattern_2'
     bl_label='uv_map_tile_pattern_2'
     bl_icon='NONE'
