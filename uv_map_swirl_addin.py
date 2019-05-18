@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodeuv_map_swirl(bpy.types.NodeCustomGroup):
+class ShaderNodeuv_map_swirl(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodeuv_map_swirl'
     bl_label='uv_map_swirl'
     bl_icon='NONE'
