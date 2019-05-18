@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodeuv_map_diamond(bpy.types.NodeCustomGroup):
+class ShaderNodeuv_map_diamond(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodeuv_map_diamond'
     bl_label='uv_map_diamond'
     bl_icon='NONE'
