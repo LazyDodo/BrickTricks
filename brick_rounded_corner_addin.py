@@ -1,5 +1,5 @@
 import bpy
-class ShaderNodebrick_rounded_corner(bpy.types.NodeCustomGroup):
+class ShaderNodebrick_rounded_corner(bpy.types.ShaderNodeCustomGroup):
     bl_name='ShaderNodebrick_rounded_corner'
     bl_label='brick_rounded_corner'
     bl_icon='NONE'
