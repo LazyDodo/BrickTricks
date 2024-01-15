@@ -113,7 +113,7 @@ class ShaderNodeuv_map_swirl(bpy.types.ShaderNodeCustomGroup):
         self.addNode('ShaderNodeCombineXYZ', { 'name':'Node84'  })
         #Sockets
         self.addSocket(False, 'NodeSocketVector', 'Point')
-        self.addSocket(False, 'NodeSocketFloatFactor', 'HAS_Point')
+        self.addSocket(False, 'NodeSocketFloat', 'HAS_Point')
         self.addSocket(False, 'NodeSocketFloat', 'Scale')
         self.addSocket(False, 'NodeSocketVector', 'Center')
         self.addSocket(False, 'NodeSocketFloat', 'brickwidth')
@@ -255,13 +255,19 @@ class ShaderNodeuv_map_swirl(bpy.types.ShaderNodeCustomGroup):
             self.node_tree=bpy.data.node_groups[name]
                    
     def addSocket(self, is_output, sockettype, name):
-        #for now duplicated socket names are not allowed
-        if is_output==True:
-            if self.node_tree.nodes['GroupOutput'].inputs.find(name)==-1:
-                socket=self.node_tree.outputs.new(sockettype, name)
-        elif is_output==False:
-            if self.node_tree.nodes['GroupInput'].outputs.find(name)==-1:
-                socket=self.node_tree.inputs.new(sockettype, name)
+        if bpy.app.version >= (4, 0, 0):
+            if is_output==True:
+                socket = self.node_tree.interface.new_socket(name, in_out='OUTPUT', socket_type=sockettype)
+            else:
+                socket = self.node_tree.interface.new_socket(name, in_out='INPUT', socket_type=sockettype)
+        else:
+            #for now duplicated socket names are not allowed
+            if is_output==True:
+                if self.node_tree.nodes['GroupOutput'].inputs.find(name)==-1:
+                    socket=self.node_tree.outputs.new(sockettype, name)
+            elif is_output==False:
+                if self.node_tree.nodes['GroupInput'].outputs.find(name)==-1:
+                    socket=self.node_tree.inputs.new(sockettype, name)
         return socket
        
     def addNode(self, nodetype, attrs):
